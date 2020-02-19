@@ -17,4 +17,6 @@ Esse projeto abordam os conceitos e práticas da linguagem JavaScript.
     - preventDefault()
     - createElement()
     - appendChild()
+    - Função Nomeadas
+    - Função Anônimas
 
