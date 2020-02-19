@@ -10,6 +10,8 @@ Esse projeto abordam os conceitos e práticas da linguagem JavaScript.
     - textContent
     - classList
     - classList.add()
+    - style.color
+    - style.backgroundColor
     - toFixed(2)
     - addEventListener()
     - preventDefault()
