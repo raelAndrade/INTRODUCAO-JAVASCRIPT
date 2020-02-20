@@ -86,9 +86,13 @@ function validaPaciente(paciente) {
 function exibeMensagemDeErro(erros) {
     var ul = document.querySelector('#mensagens-erro');
     ul.innerHTML = "";
+
     erros.forEach(function (erro) {
         var li = document.createElement("li");
         li.textContent = erro;
         ul.appendChild(li);
     });
 }
+
+/* var nome = document.querySelector("#nome");
+nome.innerHTML = "Meu nome é Israel"; */
