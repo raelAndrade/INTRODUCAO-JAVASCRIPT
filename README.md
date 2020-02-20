@@ -34,6 +34,9 @@ Esse projeto abordam os conceitos e práticas da linguagem JavaScript.
     - RegExp()
     - test()
     - this
+    - typeof
+    - JSON
+    - parse()
 
 ### AJAX 
 
