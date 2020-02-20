@@ -1,3 +1,6 @@
+var comboAlert = document.querySelector('.div');
+comboAlert.style.display = "none";
+
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 botaoAdicionar.addEventListener("click", function (event) {
     event.preventDefault(); // A função do Javascript que previne o comportamento padrão de certos elementos é o: event.preventDefault.
@@ -16,13 +19,13 @@ botaoAdicionar.addEventListener("click", function (event) {
     }
 
     var tabela = document.querySelector("#tabela-pacientes");
-
     tabela.appendChild(pacienteTr);
-
     /* Após adicionar dados, limpa o formulário */
     form.reset();
+
     var mensagensErro = document.querySelector('#mensagens-erro');
     mensagensErro.innerHTML = "";
+
 });
 
 function obtemPacienteDoFormulario(form) {
@@ -84,6 +87,10 @@ function validaPaciente(paciente) {
 }
 
 function exibeMensagemDeErro(erros) {
+
+    var comboAlert = document.querySelector('.div');
+    comboAlert.style.display = "block";
+
     var ul = document.querySelector('#mensagens-erro');
     ul.innerHTML = "";
 
@@ -92,6 +99,7 @@ function exibeMensagemDeErro(erros) {
         li.textContent = erro;
         ul.appendChild(li);
     });
+
 }
 
 /* var nome = document.querySelector("#nome");
