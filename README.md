@@ -42,4 +42,6 @@ Esse projeto abordam os conceitos e práticas da linguagem JavaScript.
 
     - XMLHttpRequest() - (O objeto XMLHttpRequest é quem é responsável por fazer requisições HTTP assíncronas com Javascript).
     - open() - (configurar nossa requisição para dizer para qual servidor queremos enviá-la e também qual método HTTP devemos usar o método .open).
+    - readyState
+    - status
 
