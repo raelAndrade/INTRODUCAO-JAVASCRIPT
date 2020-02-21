@@ -83,7 +83,7 @@
 
 			<br />
 
-			<button id="buscar-pacientes" class="botao bto-principal">Buscar Paciente</button>
+			<button id="buscar-pacientes" class="btn btn-primary">Buscar Paciente</button>
 
 		</section>
 	</main>
@@ -120,7 +120,64 @@
 				<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente"
 					class="campo campo-medio">
 			</div>
-			<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+			<br /><br />
+			<button id="adicionar-paciente" class="btn btn-primary">Adicionar</button>
+		</form>
+	</section>
+
+	<br /><br />
+
+	<section class="container">
+		<form class="form-group">
+			<div>Buscando CEP com requisição JAX</div>
+			<div class="row">
+				<div class="col-md-4">
+					<label for="">CEP</label>
+					<div class="form-group">
+						<input class="form-control" name="cep" type="text">
+					</div>
+				</div>
+				<br />
+			</div>
+
+			<button type="button" class="btn btn-primary" id="buscarcep">Buscar Endereço</button>
+
+			<br /><br />
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="">Endereço</label>
+						<input class="form-control" name="endereco" type="text">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<label for="">Numero</label>
+						<input class="form-control" name="numero" type="text">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 form-group">
+					<label for="">Bairro</label>
+					<input class="form-control" name="bairro" type="text">
+				</div>
+				<div class="col-md-4 form-group">
+					<label for="">Complemento</label>
+					<input class="form-control" name="complemento" type="text">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 form-group">
+					<label for="">Cidade</label>
+					<input class="form-control" name="cidade" type="text">
+				</div>
+				<div class="col-md-2 form-group">
+					<label for="">Estado</label>
+					<input class="form-control" name="estado" type="text">
+				</div>
+			</div>
 		</form>
 	</section>
 
@@ -198,11 +255,43 @@
 		}
 	</script> -->
 
+	<!-- <script>
+		var buscaCep = document.querySelector("#buscarcep");
+
+		buscaCep.addEventListener("click", function () {
+			let inputCep = document.querySelector('input[name=cep]');
+			let cep = inputCep.value.replace('-', '');
+			console.log(url)
+
+			let xhr = new XMLHttpRequest();
+			xhr.open("GET", "http://viacep.com.br/ws/" + cep + "/json");
+			// A propriedade onreadystatechange é disparada sempre que nossa requisição sofre alteração durante seu processamento
+			xhr.addEventListener("load", function () {
+				// O código 4 informa que a nossa requisição foi finalizada
+				if (xhr.status == 200) {
+					/* preencheCampos(JSON.parse(xhr.responseText)); */
+					console.log(JSON.parse(xhr.responseText));
+				}
+			});
+
+			xhr.send();
+		});
+
+		function preencheCampos(json) {
+			document.querySelector('input[name=endereco]').value = json.logradouro;
+			document.querySelector('input[name=bairro]').value = json.bairro;
+			document.querySelector('input[name=complemento]').value = json.complemento;
+			document.querySelector('input[name=cidade]').value = json.localidade;
+			document.querySelector('input[name=estado]').value = json.uf;
+		}
+	</script> -->
+
 	<script src="./js/calcula-imc.js"></script>
 	<script src="./js/form.js"></script>
 	<script src="./js/remover-paciente.js"></script>
 	<script src="./js/filtra.js"></script>
 	<script src="./js/buscar-pacientes.js"></script>
+	<script src="./js/buscar-por-cep.js"></script>
 	<!-- <script src="./js/convidados.js"></script> -->
 </body>
 

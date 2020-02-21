@@ -98,7 +98,7 @@ label {
 	padding: 10px 0px;
 }
 
-button {
+/* button {
 	padding: .5em 2em;
 	border: 0;
 	border-bottom: 3px solid;
@@ -126,7 +126,7 @@ button:disabled {
 	background-color: gray;
 	border-color: darkgray;
 
-}
+} */
 
 .adicionar-paciente {
 	margin-top: 30px;
